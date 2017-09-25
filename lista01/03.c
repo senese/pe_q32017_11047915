@@ -2,10 +2,10 @@
 
 int main()
 {
-    int x, y, soma;
+    int x, y, sub;
     scanf("%d%d", &x, &y);
-    soma = x * y;
+    sub = x - y;
     
-    printf("A multiplicação dos dois números inseridos é: %d\n", soma);
+    printf("A subtração dos dois números inseridos é: %d\n", sub);
     return 0;
 }
