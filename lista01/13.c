@@ -2,14 +2,14 @@
 
 int main()
 {
-    int i, n, soma=0;
-    scanf("%d", &n);
-    
-    for (i=1; i<=n; i++){
-        soma += i;
-    }
-    
-    printf("%d\n", soma);
-    
-    return 0;
+	int i, x, soma=0;
+	scanf("%d", &x);
+	
+	for (i=1; i<=x; i++){
+		soma += i;
+	}
+	
+	printf("soma de 1 a %d: %d\n", x, soma);
+	
+	return 0;
 }
