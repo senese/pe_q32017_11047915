@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int mediana(int *v, int n)
+void mediana(int *v, int n)
 {
     int a = n/2;
     
