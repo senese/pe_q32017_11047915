@@ -2,40 +2,40 @@
 #include <time.h>
 #include <limits.h>
 
-#define BIGNUM ULONG_MAX
-
-typedef unsigned long int ulint;
-
-ulint f1(ulint x)
+int f1(int x)
 {
-    int div = 8;
-    return x/div;
+	int i;
+	while(x%2 == 0)
 }
 
-ulint f2(ulint x)
+int f2(int x)
 {
-    return x >> 3;
+	return x >> 3;
 }
 
 int main(void)
 {
 	clock_t tempo_init, tempo_fim;
 	double tempo_gasto;
-	ulint soma = 0;
+	int a, n;
+	scanf("%d", &n);
 
 	tempo_init = clock();
-	for (int i=0; i<BIGNUM; i++) {
-		soma += f1(i);
-	}
+	a = f1(n);
+	if (a == 1) printf("sim\n");
+	else		printf("nao\n");
 	tempo_fim = clock();
+
 	tempo_gasto = (double)(tempo_fim - tempo_init) / CLOCKS_PER_SEC;
 	printf("Tempo gasto na versao normal: %lf\n", tempo_gasto);
 
+
 	tempo_init = clock();
-	for (int i=0; i<BIGNUM; i++) {
-		soma += f2(i);
-	}
+	a = f2(n);
+	if (a == 1) printf("sim\n");
+	else		printf("nao\n");
 	tempo_fim = clock();
+
 	tempo_gasto = (double)(tempo_fim - tempo_init) / CLOCKS_PER_SEC;
 	printf("Tempo gasto na versao bitwise: %lf\n", tempo_gasto);
 
